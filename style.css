@@ -12,6 +12,7 @@ html, body {
   background-color: rgb(50,50,50,0);
   font-size: 16px;
   text-align: center;
+  opacity: 1;
 }
 
 .navbar.solid {
@@ -41,7 +42,6 @@ html, body {
   background-color: rgb(155,155,155,0.4);
 }
 .carousel {
-  min-width: 576px;
   overflow: hidden;
   background-color: #cb9286;
 }
@@ -90,10 +90,8 @@ html, body {
   z-index: 400;
 }
 .circular-img{
-  box-sizing: border-box;
   width: 100%;
   height: 1000px;
-  min-width: 576px;
   padding: 5rem;
   margin: 0;
   text-align: center;
@@ -152,10 +150,9 @@ html, body {
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: white;
+    background-color:  #cb9286;
     width: 576px;
     text-align: center;
-
   }
   .navbar-nav {
     height: 100vh !important;
@@ -171,14 +168,38 @@ html, body {
     width: 300px;
   }
 }
-
 @media (max-width: 576px) {
   .circular-img img{
-    height: 300px;
-    width: 300px;
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .carousel {
+    min-width: 576px;
+    overflow: hidden;
+    background-color: #cb9286;
+  }
+  .container-fluid-white {
+    min-width: 576px;
+    background-size: 576px;
+    background: white;
+  }
+  .container-fluid-off-white {
+    min-width: 576px;
+    background-size: 100%;
+    background: rgba(203,146,134,.1);
+  }
+  .circular-img{
+    min-width: 576px;
+    text-align: center;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
 /*---Firefox Bug Fix --*/
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
@@ -187,6 +208,7 @@ html, body {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
 /*--- Fixed Background Image --*/
 figure {
   position: relative;
