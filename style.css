@@ -1,56 +1,88 @@
+
+
 @import url("https://use.typekit.net/sdp8vdo.css");
 html, body {
+  /* variables */
+  --off-white: rgba(203,146,134,.2);
+  --nav-rose: #cb9286;
+
   height: 100%;
   width: 100%;
   font-family: 'josefin-sans', sans-serif;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 .navbar {
-  padding: 0.1rem;
-  background-color: rgb(50,50,50,0);
-  font-size: 16px;
+  background-color: rgb(50,50,50,0.1);
+  font-size: 1rem;
   text-align: center;
-  opacity: 1;
+  transition: 0.6s;
+  z-index: 1000;
 }
-
-.navbar.solid {
-  background-color: #cb9286;
+.navbar.fixed {
+  top: 5rem;
+  margin-top: -5rem;
+  font-size: 12px;
+  text-align: center;
+  transition: 0.6s;
+  color: white;
+}
+.navbar.fixed-top {
   opacity: 1;
+  font-size: 12px;
+  text-align: center;
+  transition: 0.6s;
+  color: white;
+}
+.navbar.solid {
+  padding: 5px;
+  background-color: var(--nav-rose);
+  opacity: 1;
+  font-size: 12px;
+  text-align: center;
+  transition: 0.6s;
 }
 .container-fluid {
   padding: 0px;
 }
-.container-fluid-white {
-  padding: 0px;
-  background: rgba(255,255,255);
+.container-fluid.white {
+  background: white;
 }
-.container-fluid-off-white {
-  padding: 0px;
-  background: rgba(203,146,134,.1);
+.container-fluid.off-white {
+  background: var(--off-white);
 }
-.navbar-nav li {
-  padding-right: 20px;
-  font-weight: 300;
-  font-style: normal;
+
+.navbar-nav li:hover {
+  opacity: 1;
+  color: white;
+}
+.nav-item {
+  padding: 9px 12px;
+  font-size: 12px;
+  color: white;
 }
 .nav-link {
   font-size: 1.1em !important;
+  color: white;
 }
-.navbar-toggler {
-  background-color: rgb(155,155,155,0.4);
+.custom-toggler {
+  background: var(--nav-rose);
+}
+.custom-toggler.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .carousel {
   overflow: hidden;
-  background-color: #cb9286;
+  background-color: var(--nav-rose);
 }
 .color-overlay {
   width: 100%;
   height: 100%;
-  background: #cb9286;
+  background: var(--nav-rose);
   opacity: 0.2;
-  position: absolute;
+  position: fixed;
   z-index: 100;
 }
 .carousel-inner img {
@@ -81,13 +113,31 @@ html, body {
   margin: 1em auto 0;
 }
 .carousel-control-prev {
+  /* display: none; */
   z-index: 400;
 }
 .carousel-control-next {
+  /* display: none; */
   z-index: 400;
 }
 .carousel-indicators {
   z-index: 400;
+}
+.carousel:hover .carousel-indicators li {
+  display: block;
+}
+.carousel:hover .carousel-control-next {
+  display: block;
+}
+.carousel:hover .carousel-control-prev {
+  display: block;
+}
+.carousel-indicators li {
+  /* display: none; */
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  opacity: 0.4;
 }
 .circular-img{
   width: 100%;
@@ -150,8 +200,8 @@ html, body {
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color:  #cb9286;
-    width: 576px;
+    color: white;
+    background-color: var(--nav-rose);
     text-align: center;
   }
   .navbar-nav {
@@ -160,6 +210,13 @@ html, body {
   .circular-img img{
     height: 400px;
     width: 400px;
+  }
+  .navbar.solid {
+    background-color: transparent;
+  }
+  .custom-toggler {
+    background: var(--nav-rose);
+    opacity: 0.5;
   }
 }
 @media (max-width: 768px) {
@@ -174,27 +231,21 @@ html, body {
     min-width: 200px;
   }
   .carousel {
-    min-width: 576px;
+    min-width: 100%;
     overflow: hidden;
-    background-color: #cb9286;
+    background-color: var(--nav-rose);
   }
-  .container-fluid-white {
-    min-width: 576px;
-    background-size: 576px;
-    background: white;
-  }
-  .container-fluid-off-white {
-    min-width: 576px;
+  .container-fluid {
+    min-width: 100%;
     background-size: 100%;
-    background: rgba(203,146,134,.1);
   }
   .circular-img{
-    min-width: 576px;
+    min-width: 100%;
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -205,8 +256,11 @@ html, body {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*--- Fixed Background Image --*/

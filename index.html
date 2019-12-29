@@ -12,22 +12,24 @@
 </head>
 <body>
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Ceremony</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Reception</a></li>
-            <li class="nav-item active"><a class="nav-link" href="#">Ali & Mike</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">After party</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Info</a></li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-trans fixed">
+      <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="custom-toggler navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link" href="#ceremony">CEREMONY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reception">RECEPTION</a></li>
+          <li class="nav-item active"><a class="nav-link" href="?">ALI & MIKE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#afterparty">AFTERPARTY</a></li>
+          <li class="nav-item"><a class="nav-link" href="info">INFO</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
       <!-- Indicators -->
       <ul class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -36,10 +38,7 @@
         <li data-target="#myCarousel" data-slide-to="3"></li>
       </ul>
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="color-overlay"></div>
-
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-item active" >
           <img class="d-block img-fluid" src="img/Carousel/Ali-and-animals.jpg" alt="Ali-and-animals">
         </div>
@@ -60,75 +59,86 @@
           <h6>May 2nd, 2020</h6>
         </div>
       </div>
-      <!-- Left and right controls -->
-      <div class="crousel-controls">
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
     </div>
+    <!-- Left and right controls -->
+    <div class="crousel-controls">
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
 
-    <div class="container-fluid container-fluid-white">
-      <div class="circular-img">
-        <img src="img/Circular/chateau.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
-        <h1>The Ceremony</h1>
-        <h3>2:00pm</h3>
-        <div class="text-align-center">
-          Martinborough
-          <br>
-          90 Regent St
-          <br>
-          <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
-        </div>
+  <div class="container-fluid white" id="ceremony">
+    <div class="circular-img">
+      <img src="img/Circular/chateau.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
+      <h1>The Ceremony</h1>
+      <h3>2:00pm</h3>
+      <div class="text-align-center">
+        Martinborough
+        <br>
+        90 Regent St
+        <br>
+        <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
       </div>
     </div>
-    <div class="container-fluid container-fluid-off-white">
-      <div class="circular-img">
-        <img src="img/Circular/engagement.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
-        <h1>The Reception</h1>
-        <h3>2:30pm - 8:00pm</h3>
-        <div class="text-align-center">
-          Martinborough
-          <br>
-          90 Regent St
-          <br>
-          <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
-        </div>
+  </div>
+  <div class="container-fluid off-white" id="reception">
+    <div class="circular-img">
+      <img src="img/Circular/engagement.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
+      <h1>The Reception</h1>
+      <h3>2:30pm - 8:00pm</h3>
+      <div class="text-align-center">
+        Martinborough
+        <br>
+        90 Regent St
+        <br>
+        <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
       </div>
     </div>
-    <div class="container-fluid container-fluid-white">
-      <div class="circular-img">
-        <img src="img/Circular/river.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
-        <h1>The Afterparty</h1>
-        <h3>8:00pm - 12:00am</h3>
-        <div class="text-align-center">
-          Martinborough
-          <br>
-          90 Regent St
-          <br>
-          <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
+  </div>
+  <div class="container-fluid white" id="afterparty">
+    <div class="circular-img">
+      <img src="img/Circular/river.jpg" class="rounded-circle mx-auto d-block" alt="Responsive image">
+      <h1>The Afterparty</h1>
+      <h3>8:00pm - 12:00am</h3>
+      <div class="text-align-center">
+        Martinborough
+        <br>
+        90 Regent St
+        <br>
+        <a target="_blank" href="https://www.google.com/maps/place/Martinborough">View Map</a>
       </div>
     </div>
   </div>
   <script type="text/javascript">
     $(function(){
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop(); // how many pixels you've scrolled
-            var os = $('#myCarousel').offset().top; // pixels to the top of div1
-            var ht = $('#myCarousel').height(); // height of div1 in pixels
-            // if you've scrolled further than the top of div1 plus it's height
-            // change the color. either by adding a class or setting a css property
-            if(scroll > os + ht){
-                $('.navbar').addClass('solid');
-            }else{
-              $('.navbar').removeClass('solid');
-            }
-        });
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop(); // how many pixels you've scrolled
+        var os = $('#myCarousel').offset().top; // pixels to the top of div1
+        var ht = $('#myCarousel').height(); // height of div1 in pixels
+        // if you've scrolled further than the top of div1 plus it's height
+        // change the color. either by adding a class or setting a css property
+        if(scroll >= os + ht){
+            $('.navbar').addClass('solid');
+            $('.navbar').removeClass('fixed');
+            $('.navbar').addClass('fixed-top');
+        }else{
+          $('.navbar').removeClass('solid');
+          $('.navbar').removeClass('fixed-top');
+          $('.navbar').addClass('fixed');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $('.navbar-collapse a').click(function(){
+      $(".navbar-collapse").collapse('hide');
     });
   </script>
   <!-- Optional JavaScript -->
