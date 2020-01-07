@@ -37,7 +37,6 @@ html, body {
   color: white;
 }
 .navbar.solid {
-  padding: 5px;
   background-color: var(--nav-rose);
   opacity: 1;
   font-size: 12px !important;
