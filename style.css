@@ -13,7 +13,7 @@ html, body {
   font-style: normal;
   scroll-behavior: smooth;
 }
-erlay {
+.overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -109,7 +109,7 @@ erlay {
   color: white;
 }
 .nav-link {
-  font-size: 1.1em !important;
+  font-size: 1.1em;
   color: white;
 }
 .nav-link:hover {
@@ -142,14 +142,14 @@ erlay {
   position: absolute;
   top: 40%;
   z-index: 400;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .carousel-caption h1{
   font-size: 72px;
   font-weight: 700;
   font-style: normal;
   text-transform: none;
-  letter-spacing: -0.2rem;
+  letter-spacing: 0rem;
 }
 .carousel-caption h6{
   font-weight: 300;
@@ -269,7 +269,7 @@ erlay {
     font-weight: 400;
     font-style: normal;
     text-transform: none;
-    letter-spacing: -0.2rem;
+    letter-spacing: 0rem;
   }
   .carousel-caption h6{
     font-size: 30px;
@@ -282,12 +282,16 @@ erlay {
     color: white;
     background-color: var(--nav-rose);
     text-align: center;
+    margin-top:-50px
   }
   .navbar-nav {
-    height: 100vh !important;
   }
   .nav-link:hover {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    color: white;
+  }
+  .nav-link {
+    font-size: 1.5em;
     color: white;
   }
   .circular-img img{
@@ -314,6 +318,9 @@ erlay {
     height: 300px;
     width: 300px;
   }
+  .navbar-collapse {
+    margin-top:-50px
+  }
 }
 @media (max-width: 576px) {
   .carousel-caption h1 {
@@ -321,14 +328,14 @@ erlay {
     font-weight: 400;
     font-style: normal;
     text-transform: none;
-    letter-spacing: -0.2rem;
+    letter-spacing: 0rem;
   }
   .carousel-caption h2 {
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     text-transform: none;
-    letter-spacing: -0.2rem;
+    letter-spacing: 0rem;
   }
   .circular-img img{
     max-height: 300px;
@@ -359,7 +366,8 @@ erlay {
     min-width: 100%;
     text-align: center;
   }
-  div.collapse.navbar-collapse {
+  .navbar-collapse {
+    margin-top:-50px
   }
 }
 
